@@ -1,0 +1,11 @@
+FROM node:20
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm set strict-ssl false && npm install
+
+COPY . .
+
+CMD ["npm", "run", "dev"]
