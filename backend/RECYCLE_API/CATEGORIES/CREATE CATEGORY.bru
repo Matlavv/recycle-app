@@ -1,0 +1,18 @@
+meta {
+  name: CREATE CATEGORY
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{api_url}}/category/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Produit Ménager"
+  }
+  
+}

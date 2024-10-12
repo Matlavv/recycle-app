@@ -1,0 +1,19 @@
+meta {
+  name: CREATE BINTYPE
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/bintype/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Verre",
+    "description": "Pour les bouteilles et bocaux en verre"
+  }
+  
+}

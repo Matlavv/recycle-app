@@ -1,0 +1,19 @@
+meta {
+  name: UPDATE ITEM
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{api_url}}/item/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Updated Example Item",
+    "ecologicalGrade": 4
+  }
+  
+}
