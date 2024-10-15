@@ -31,6 +31,10 @@ class BinTypeService {
     }
     throw new Error('BinType not found');
   }
+
+  async getBinTypeByName(name: string) {
+    return await BinType.findOne({ where: { name } });
+  }
 }
 
 export default new BinTypeService();

@@ -30,6 +30,10 @@ class ItemService {
     }
     throw new Error('Item not found');
   }
+
+  async getItemByName(name: string) {
+    return await Item.findOne({ where: { name } });
+  }
 }
 
 export default new ItemService();

@@ -30,6 +30,9 @@ class CategoryService {
     }
     throw new Error('Category not found');
   }
+  async getCategoryByName(name: string) {
+    return await Category.findOne({ where: { name } });
+  }
 }
 
 export default new CategoryService();

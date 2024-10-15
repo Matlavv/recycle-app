@@ -4,6 +4,12 @@ import ItemService from '../services/item.service';
 class ItemController {
   async createItem(req: Request, res: Response) {
     try {
+      const existingItem = await ItemService.getItemByName(req.body.name);
+      if (existingItem) {
+        return res
+          .status(400)
+          .json({ error: 'An item with the same name already exists.' });
+      }
       const newItem = await ItemService.createItem(req.body);
       res.status(201).json(newItem);
     } catch (error) {
