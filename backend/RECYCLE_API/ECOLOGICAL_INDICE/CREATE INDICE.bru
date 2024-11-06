@@ -1,0 +1,20 @@
+meta {
+  name: CREATE INDICE
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/ecologicalIndice/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "grade": "A",
+    "theme": "global",
+    "color": "#fff",
+    "description": "Note globale"
+  }
+}

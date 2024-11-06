@@ -1,36 +1,51 @@
 import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../config/connection';
 
-export class ProductAlternative extends Model {
+export class Affiliation extends Model {
   public id!: number;
-  public item_id!: number;
-  public alternative_item_id!: number;
+  public product_id!: number;
+  public totalClicks!: number;
+  public uniqueClicks!: number;
+  public clicksPerDay!: number;
+  public lastClickedAt!: Date;
+  public link!: string;
   public createdAt!: Date;
   public updatedAt!: Date;
 }
 
-ProductAlternative.init(
+Affiliation.init(
   {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
-    item_id: {
+    product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Items',
+        model: 'Products',
         key: 'id',
       },
       allowNull: false,
     },
-    alternative_item_id: {
+    totalClicks: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'Items',
-        key: 'id',
-      },
       allowNull: false,
+      defaultValue: 0,
+    },
+    uniqueClicks: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    clicksPerDay: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    lastClickedAt: {
+      type: DataTypes.DATE,
+      allowNull: true,
     },
     createdAt: {
       type: DataTypes.DATE,
@@ -43,6 +58,6 @@ ProductAlternative.init(
   },
   {
     sequelize,
-    tableName: 'ProductAlternatives',
+    tableName: 'Affiliations',
   },
 );
