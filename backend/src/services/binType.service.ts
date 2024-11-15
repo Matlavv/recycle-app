@@ -1,4 +1,4 @@
-import { BinType } from '../models/binType.model';
+import { BinType } from '../models';
 
 class BinTypeService {
   async createBinType(data: any) {
