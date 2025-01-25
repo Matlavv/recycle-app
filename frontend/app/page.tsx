@@ -3,6 +3,7 @@ import SectionSearchBar from '@/app/components/layout/SectionSearchBar';
 import Description from './components/layout/Description';
 import SectionNumber from './components/layout/SectionNumber';
 import SectionCards from './components/layout/SectionCards';
+import JoinUsSection from './components/layout/JoinUsSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Description />
         <SectionNumber />
         <SectionCards />
+        <JoinUsSection />
       </section>
     </div>
   );
