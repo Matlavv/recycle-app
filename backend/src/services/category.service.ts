@@ -1,4 +1,4 @@
-import { Category } from '../models/category.model';
+import { Category } from '../models';
 
 class CategoryService {
   async createCategory(data: any) {
@@ -29,6 +29,9 @@ class CategoryService {
       return true;
     }
     throw new Error('Category not found');
+  }
+  async getCategoryByName(name: string) {
+    return await Category.findOne({ where: { name } });
   }
 }
 

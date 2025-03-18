@@ -1,0 +1,27 @@
+meta {
+  name: CREATE PRODUCTS
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/product/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Example Product",
+    "description": "Product 1",
+    "brand": "nike",
+    "image":"",
+    "binType_id": 1,
+    "materials": ["plastique"],
+    "ecologicalIndice_id": 1,
+    "isAffiliated": false,
+    "category_id": 2,
+    "ecologicalColor": "green"
+  }
+  
+}

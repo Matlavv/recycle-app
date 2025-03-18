@@ -1,0 +1,22 @@
+meta {
+  name: CREATE AFILIATION
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api_url}}/affiliation/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "product_id": 2,
+    "totalClicks": 0,
+    "uniqueClicks": 0,
+    "clicksPerDay": 0,
+    "lastClickedAt": "01/02/2024",
+    "link": ""
+  }
+}
