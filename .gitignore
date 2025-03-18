@@ -14,7 +14,6 @@ build/
 
 # Docker
 docker-compose.override.yml
-docker-compose.override.yml
 .dockerignore
 
 # Environment variables
@@ -27,3 +26,6 @@ docker-compose.override.yml
 # PostgreSQL
 *.pgdata
 *.pgdump
+
+#idea
+.idea/

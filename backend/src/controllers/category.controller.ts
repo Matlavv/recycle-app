@@ -4,6 +4,15 @@ import CategoryService from '../services/category.service';
 class CategoryController {
   async createCategory(req: Request, res: Response) {
     try {
+      const existingCategory = await CategoryService.getCategoryByName(
+        req.body.name,
+      );
+      if (existingCategory) {
+        console.log('Category already exists');
+        // return res
+        //   .status(400)
+        //   .json({ error: 'A category with the same name already exists.' });
+      }
       const newCategory = await CategoryService.createCategory(req.body);
       res.status(201).json(newCategory);
     } catch (error) {

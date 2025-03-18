@@ -1,4 +1,4 @@
-import { BinType } from '../models/binType.model';
+import { BinType } from '../models';
 
 class BinTypeService {
   async createBinType(data: any) {
@@ -30,6 +30,10 @@ class BinTypeService {
       return true;
     }
     throw new Error('BinType not found');
+  }
+
+  async getBinTypeByName(name: string) {
+    return await BinType.findOne({ where: { name } });
   }
 }
 

@@ -1,10 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { sequelize } from './config/connection';
+import './models/index';
 import binTypeRoutes from './routes/binType.route';
 import categoryRoutes from './routes/category.route';
-import itemRoutes from './routes/item.route';
-import productAlternativeRoutes from './routes/productAlternative.route';
+import productRoutes from './routes/product.route';
+import affiliationRoutes from './routes/affiliation.route';
+import ecologicalIndiceRoutes from './routes/ecologicalIndice.route';
+import errorHandler from './middlewares/errorHandler';
 
 dotenv.config();
 
@@ -15,17 +17,14 @@ app.use(express.json());
 
 app.use('/api/binType', binTypeRoutes);
 app.use('/api/category', categoryRoutes);
-app.use('/api/item', itemRoutes);
-app.use('/api/productAlternative', productAlternativeRoutes);
+app.use('/api/product', productRoutes);
+app.use('/api/affiliation', affiliationRoutes);
+app.use('/api/ecologicalIndice', ecologicalIndiceRoutes);
 
-app.listen(port, async () => {
+app.use(errorHandler);
+
+app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-  try {
-    await sequelize.sync({ force: true });
-    console.log('Database synchronized');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
 });
 
 export default app;
