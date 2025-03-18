@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </div>    
       <div className='w-full absolute left-0 right-0 justify-center items-center sm:block hidden'>
-          <p className="uppercase text-center mix-blend-screen text-black bg-gray-200 w-screen sm:text-8xl md:text-8xl lg:text-[150px] xl:text-[180px]">
+          <p className="font-semibold uppercase text-center mix-blend-screen text-black bg-gray-200 w-screen sm:text-8xl md:text-8xl lg:text-[150px] xl:text-[180px]">
               Rejoins nous
           </p>
       </div>
