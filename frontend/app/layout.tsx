@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={urbanist.variable}>
-      <body className={`antialiased bg-grey font-urbanist`}>{children}</body>
+      <body className={`antialiased font-urbanist`}>{children}</body>
     </html>
   );
 }
