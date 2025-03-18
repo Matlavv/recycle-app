@@ -4,6 +4,7 @@ import Description from './components/layout/Description';
 import SectionNumber from './components/layout/SectionNumber';
 import SectionCards from './components/layout/SectionCards';
 import JoinUsSection from './components/layout/JoinUsSection';
+import Footer from './components/layout/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <SectionNumber />
         <SectionCards />
         <JoinUsSection />
+        <Footer />
       </section>
     </div>
   );

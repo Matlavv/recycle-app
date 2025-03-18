@@ -46,7 +46,7 @@ export default function JoinUsSection() {
             dapibus dignissim morbi.
           </p>
           <div className="flex justify-center lg:justify-start">
-            <button className="bg-light-green p-3 rounded-3xl w-full sm:w-60 flex flex-row justify-between items-center hover:scale-105 transition-transform">
+            <button className="bg-light-green p-3 rounded-3xl w-full sm:w-60 flex flex-row items-center justify-center gap-2 hover:scale-105 transition-transform">
               <span className="text-dark-green font-urbanist font-semibold">
                 Rejoins la communauté !
               </span>
