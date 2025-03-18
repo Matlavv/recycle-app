@@ -1,5 +1,13 @@
+import { Urbanist } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
+
+const urbanist = Urbanist({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-urbanist',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Recycle Me',
@@ -12,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`antialiased`}>{children}</body>
+    <html lang="fr" className={urbanist.variable}>
+      <body className={`antialiased bg-grey font-urbanist`}>{children}</body>
     </html>
   );
 }

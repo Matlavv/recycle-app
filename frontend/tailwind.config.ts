@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        urbanist: ['Urbanist', 'sans-serif'],
+        urbanist: ['var(--font-urbanist)'],
       },
       colors: {
         background: 'var(--background)',
