@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={urbanist.variable}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`antialiased font-urbanist`}>{children}</body>
     </html>
   );
