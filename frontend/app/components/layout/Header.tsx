@@ -10,7 +10,11 @@ export const Header = () => {
   return (
     <div className="flex flex-row justify-between items-center p-4 sm:p-8 bg-white">
       <div className="flex items-center">
-        <Image src={logo} alt="logo" className="sm:w-10 sm:h-12 w-6 h-7 sm:mr-8 mr-2" />
+        <Image
+          src={logo}
+          alt="logo"
+          className="sm:w-10 sm:h-12 w-6 h-7 sm:mr-8 mr-2"
+        />
         <h1 className="text-dark-green text-lg font-bold font-urbanist">
           Recycle Me
         </h1>

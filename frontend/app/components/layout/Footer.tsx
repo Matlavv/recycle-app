@@ -1,6 +1,5 @@
-import React from 'react';
-import mountain_2 from '../../assets/mountain_2.png';
 import Image from 'next/image';
+import mountain_2 from '../../assets/mountain_2.png';
 
 export default function Footer() {
   return (
@@ -48,14 +47,18 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-      </div>    
-      <div className='w-full absolute left-0 right-0 justify-center items-center sm:block hidden'>
-          <p className="font-semibold uppercase text-center mix-blend-screen text-black bg-gray-200 w-screen sm:text-8xl md:text-8xl lg:text-[150px] xl:text-[180px]">
-              Rejoins nous
-          </p>
       </div>
-      <div className='static sm:block hidden'>
-        <Image src={mountain_2} alt="mountain" className="w-full object-cover object-bottom h-[400px]" />
+      <div className="w-full absolute left-0 right-0 justify-center items-center sm:block hidden">
+        <p className="font-semibold uppercase text-center mix-blend-screen text-black bg-gray-200 w-screen sm:text-8xl md:text-8xl lg:text-[150px] xl:text-[180px]">
+          Rejoins nous
+        </p>
+      </div>
+      <div className="static sm:block hidden">
+        <Image
+          src={mountain_2}
+          alt="mountain"
+          className="w-full object-cover object-bottom h-[400px]"
+        />
       </div>
     </div>
   );
